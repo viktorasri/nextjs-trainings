@@ -17,3 +17,16 @@ export const PrimaryButton: ComponentStoryObj<typeof Button> = {
     await expect(args.onClick).toHaveBeenCalled();
   },
 };
+
+export const SecondaryButton: ComponentStoryObj<typeof Button> = {
+  ...PrimaryButton,
+  args: { color: 'secondary' },
+};
+export const DangerButton: ComponentStoryObj<typeof Button> = {
+  ...PrimaryButton,
+  args: { color: 'danger' },
+};
+export const WarningButton: ComponentStoryObj<typeof Button> = {
+  ...PrimaryButton,
+  args: { color: 'warning' },
+};

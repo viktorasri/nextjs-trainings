@@ -3,6 +3,7 @@ import { FC, PropsWithChildren } from 'react';
 import { borderRadius, boxShadow } from '../styles';
 
 interface ITile extends PropsWithChildren {
+  /** Header string **/
   header: string;
 }
 

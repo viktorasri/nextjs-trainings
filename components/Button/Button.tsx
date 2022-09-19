@@ -1,13 +1,16 @@
 import { css, SerializedStyles } from '@emotion/react';
 import styled from '@emotion/styled';
 import { AppTheme } from '~/styles/themes';
-import { boxShadow, transition, borderRadius } from '../styles';
+import { borderRadius, boxShadow, transition } from '../styles';
 
 export type Color = 'primary' | 'secondary' | 'danger' | 'warning';
 
 export type Props = {
+  /** Button text content **/
   children: string;
+  /** Button color  **/
   color?: Color;
+  /** Click handler **/
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
