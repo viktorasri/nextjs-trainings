@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import { ChangeEvent, FC, useRef } from 'react';
+import { ChangeEvent, FC } from 'react';
+import { useId } from '../hooks';
 import { boxShadow, transition } from '../styles';
 
 const Wrapper = styled.label`
@@ -41,14 +42,14 @@ type Props = {
 };
 
 export const Checkbox: FC<Props> = ({ onChange }) => {
-  const { current: fieldId } = useRef(
-    `prefix-${Math.random().toString(16).slice(2)}`
-  );
+  const fieldId = useId();
 
   return (
     <Wrapper>
       <input id={fieldId} type="checkbox" onChange={onChange} />
-      <VisiblePart htmlFor={fieldId}>✔</VisiblePart>
+      <VisiblePart data-testid="custom-checkbox" htmlFor={fieldId}>
+        ✔
+      </VisiblePart>
     </Wrapper>
   );
 };
