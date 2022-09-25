@@ -3,7 +3,7 @@ import { Icon } from './Icon';
 
 describe('Icon test cases', () => {
   it('Icon render check', () => {
-    const { asFragment } = render(<Icon name="Moon" size="2rem" />);
+    const { asFragment } = render(<Icon name="Moon" size={2} />);
 
     expect(asFragment()).toMatchSnapshot();
   });

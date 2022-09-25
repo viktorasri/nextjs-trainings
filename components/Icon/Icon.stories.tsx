@@ -12,6 +12,6 @@ export const BasicIcon: ComponentStoryObj<typeof Icon> = {
   },
   args: {
     name: 'Home',
-    size: '2.5rem',
+    size: 2,
   },
 };
